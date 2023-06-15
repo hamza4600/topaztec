@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Navbar from "@/components/navbar";
 import FooterComponent from "@/components/footer";
 // Font
-import { Manrope } from "@next/font/google";
+import { Poppins } from "@next/font/google";
 
 export default function App({ Component, pageProps }) {
     return (

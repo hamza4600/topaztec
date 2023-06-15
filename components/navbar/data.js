@@ -1,22 +1,28 @@
 export const navitems = [
     {
         id: 1,
-        name: "work",
-        link: "/work",
+        name: "services",
+        link: "/services",
     },
     {
         id: 2,
-        name: "lta famaily",
-        link: "/family",
+        name: "portfolio",
+        link: "/portfolio",
     },
     {
         id: 3,
-        name: "career",
-        link: "/career",
+        name: "for agencies",
+        link: "/agencies",
     },
     {
         id: 4,
         name: "contact",
         link: "/contact",
     },
+    {
+        id: 5,
+        type : "button",
+        name: "get started",
+        link: "#",
+    }
 ];

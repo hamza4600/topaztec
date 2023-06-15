@@ -2,7 +2,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const lightTheme = {
-    font: "Manrope, sans-serif",
+    font: "Poppins, sans-serif",
     body: '#fff',
     text: '#000',
     footer : '#000',
@@ -10,7 +10,7 @@ const lightTheme = {
 }
 
 const darkTheme = {
-    font: "Manrope, sans-serif",
+    font: "Poppins, sans-serif",
     body: '#363537',
     text: '#FAFAFA',
     footer : '#fff',

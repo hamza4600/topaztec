@@ -1,88 +1,116 @@
-import img from "../../public/icons/lifetech-footer.png"
-import icon from "../../public/icons/lifetech-wt.png"
-import { Icon, ItemList, SectionOne, SectionTwo, Footer, ImageWrapper } from "./style";
+import styled from "styled-components";
+import img from "../../public/icon/topz.jpg";
+
+import { ItemList, SectionOne, Footer } from "./style";
 
 const deign = [
-    {id : 1, name: "digital branding", link: "/"},
-    {id : 2, name: "E-commerce design", link: "/"},
-    {id : 3, name: "ui/ux design", link: "/"},
-]
+    { id: 1, name: "digital branding", link: "/" },
+    { id: 2, name: "E-commerce design", link: "/" },
+    { id: 3, name: "ui/ux design", link: "/" },
+];
 const develop = [
-    {id : 1, name: "web development", link: "/"},
-    {id : 2, name: "E-commerce development", link: "/"},
-    {id : 3, name: "no code develop", link: "/"},
-]
+    { id: 1, name: "web development", link: "/" },
+    { id: 2, name: "E-commerce development", link: "/" },
+    { id: 3, name: "no code develop", link: "/" },
+];
 const social = [
-    {id : 1, name: "instagram", link: "/"},
-    {id : 2, name: "facebook", link: "/"},
-    {id : 3, name: "twitter", link: "/"},
-]
+    { id: 1, name: "instagram", link: "/" },
+    { id: 2, name: "facebook", link: "/" },
+    { id: 3, name: "twitter", link: "/" },
+];
 
-const FooterItem =({title , list}) => {
+const CopyWrapper = styled.div`
+    margin-top: 2rem;
+    border-top: 1px solid #fff;
+    padding-top: 2rem;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    // color: ${(props) => props.theme.footerText};
+    color: #fff;
+
+    i {
+        width: 0.286rem;
+        height: 0.286rem;
+        background-color: #fff;
+        margin: 0 0.5rem;
+    }
+`;
+
+const FooterItem = ({ title, list }) => {
     return (
         <>
             <ItemList>
                 <h2>{title}</h2>
                 <ul>
-                    {Array.isArray(list) && list.length !== 0 &&
-                        list.map((item) => (    
-                            <a key={item.id} href={item.link}>{item.name}</a>
-                            ))
-                    }
+                    {Array.isArray(list) &&
+                        list.length !== 0 &&
+                        list.map((item) => (
+                            <a key={item.id} href={item.link}>
+                                {item.name}
+                            </a>
+                        ))}
                 </ul>
             </ItemList>
         </>
-    )
-}
+    );
+};
 
-const FooterSectionOne = () => (
-     <>
-            <SectionOne id="ftone">
-                <div className="imgwrap">
-                    <img src = {icon.src} alt="lifetech" />
-                    <h1>applications</h1>
+const RightSide = () => {
+    return (
+        <>
+            <div>
+                <div>
+                    <img
+                        src={img.src}
+                        alt="logo"
+                        width="100px"
+                        height="100px"
+                    />
                 </div>
-                <div className="row">
-                    <FooterItem title="design" list={deign} />
-                    <FooterItem title="develop" list={develop} />
-                    <FooterItem title="follow" list={social} />
-                    <FooterSectionTwo showMbl />
-                </div>
-            </SectionOne>
+                {/* social media icons */}
+                <div></div>
+            </div>
         </>
-)
-
-const FooterSectionTwo = ({...props}) => (
-    <>
-        <SectionTwo id="ftsctwo" none {...props}>
-            <h1>
-            Everything begins<br/>
-            with an idea. <strong>join us</strong>
-            </h1>
-            <i>
-                <Icon />
-            </i>
-
-            <a href="mailto: lifetech@gmail.com">
-                lifetech@gmail.com
-            </a>
-        </SectionTwo>
-    </>
-)
-
+    );
+};
+const CopyRight = () => {
+    return (
+        <>
+            <CopyWrapper>
+                <span>CopyRight © 2021 Topz</span>
+                <i></i>
+                <span>All rights reserved</span>
+                <i></i>
+                <span>Privacy Policy</span>
+                <i></i>
+                <span>Terms of Service</span>
+            </CopyWrapper>
+        </>
+    );
+};
 const FooterComponent = () => {
     return (
         <>
             <Footer>
-                    <FooterSectionOne />
-                    <FooterSectionTwo />
-                    <ImageWrapper>
-                        <img src={img.src} alt="lifetech" />
-                    </ImageWrapper>
-            </Footer>        
+                <SectionOne id="ftone">
+                    <div className="col">
+                        <RightSide />
+
+                        <div className="row">
+                            <FooterItem title="design" list={deign} />
+                            <FooterItem title="develop" list={develop} />
+                            <FooterItem title="follow" list={social} />
+                        </div>
+                    </div>
+                    <CopyRight />
+                </SectionOne>
+            </Footer>
         </>
-    )
-}
+    );
+};
 
-
-export default FooterComponent
+export default FooterComponent;

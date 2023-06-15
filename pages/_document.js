@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="theme-color" content="#000000" />
-          <link rel="icon" type="image/svg" href="/icons/Lf-icon.svg"/>
+          <link rel="icon" type="image/svg" href="/icon/topz.jpg"/>
           <link rel="apple-touch-icon" href="/icons/Lf-icon.svg"/>
         </Head>
         <body>

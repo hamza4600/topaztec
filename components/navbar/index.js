@@ -5,9 +5,7 @@ import { useRouter } from "next/router";
 
 import { Nav, MobileNav, MobileNavHeader, List } from "./style";
 
-import icon from "../../public/icons/lifetech.svg";
-import iconWhit from "../../public/icons/lifetech-wit.svg";
-import mblIcon from "../../public/icons/lifetech-nav.png";
+import icon from "../../public/icon/topz.jpg";
 import { AiOutlineClose } from "react-icons/ai";
 import { SlMenu } from "react-icons/sl";
 
@@ -33,11 +31,15 @@ const MobileNavItems = ({ onClick, current }) => {
         <>
             <MobileNav>
                 <MobileNavHeader aria-label="mobile nav header">
-                    <div aria-label="logo">
-                        <Link href="/">
-                            <img src={mblIcon.src} alt="logo" />
-                        </Link>
-                    </div>
+                    <Link href="/">
+                        <img
+                            src={icon.src}
+                            alt="logo"
+                            width="100px"
+                            height="100px"
+                        />
+                    </Link>
+
                     <div
                         aria-label="close"
                         className="no-outline"
@@ -80,7 +82,7 @@ const MobileNavItems = ({ onClick, current }) => {
     );
 };
 
-const NavItem = ({ item, onClick, current }) => {
+const NavItem = ({ item, onClick, current, id }) => {
     const active = current === item.link ? true : false;
     return (
         <>
@@ -90,6 +92,7 @@ const NavItem = ({ item, onClick, current }) => {
                 aria-current={active ? "page" : ""}
                 onClick={onClick}
                 className={active ? "active" : ""}
+                id={id}
             >
                 {item.name}
             </Link>
@@ -108,20 +111,20 @@ const Navbar = () => {
     };
 
     const router = useRouter();
-    const isContact = router.pathname === "/contact" ? true : false;
 
     return (
         <>
             <Nav open={open} aria-label="nav">
                 <div id="first">
-                    <div>
-                        <Link aria-label="logo" href="/">
+                    <Link aria-label="logo" href="/">
+                        <div>
                             <img
-                                src={isContact ? iconWhit.src : icon.src}
+                                src={icon.src}
                                 alt="logo"
+                                style={{ width: "100px", height: "100px" }}
                             />
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                     <div type="button" aria-label="menu" aria-expanded={open}>
                         {mobile ? (
                             <>
@@ -138,18 +141,19 @@ const Navbar = () => {
                                         size={23}
                                         onClick={handleOpen}
                                         className="cursor"
-                                        color={isContact ? "white" : "black"}
+                                        color={"black"}
                                     />
                                 )}
                             </>
                         ) : (
                             <>
-                                <List aria-label="nav list" carrer={isContact}>
+                                <List aria-label="nav list">
                                     {navitems.map((item) => (
                                         <NavItem
                                             key={item.id}
                                             item={item}
                                             current={router.pathname}
+                                            id={item?.type}
                                         >
                                             {item.name}
                                         </NavItem>

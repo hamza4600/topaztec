@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-    padding: 0 2rem;
-    position: relative;
+    padding: 0 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
     transition: all 0.5s ease-in-out;
 
     #first {
-        border-bottom: 1px solid black;
+        position: relative;
         width: 100%;
         height: 90px;
         display: flex;
@@ -44,17 +51,34 @@ export const List = styled.ul`
 
     a {
         margin: 0 1rem;
-        font-size: 1.2rem;
+        font-size: 16px;
         font-weight: 500;
         color: ${({ carrer }) => (carrer ? "#fff" : "#000" )};
         transition: all 0.15s ease-in-out;
         cursor: pointer;
-        text-transform: uppercase;
+        text-transform: capitalize;
         text-decoration: none;
 
         &:hover {
             color: #f3911e;
         }
+    }
+
+    #button {
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        background-color: #f3911e;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.15s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f3911e;
+            color: #fff;
+        }
+
     }
 
     @media screen and (max-width: 768px) {
