@@ -1,4 +1,4 @@
-// import IndexPage from "@/components/mainPage";
+import IndexPage from "@/components/Index-Page";
 import SeoCard from "@/components/seo";
 import Head from "next/head";
 
@@ -25,7 +25,7 @@ export default function Home() {
                 {/* <title>{seo.title}</title>
                 <SeoCard seo={seo} keywords={seo.keywords} /> */}
             </Head>
-            {/* <IndexPage /> */}
+                <IndexPage />
         </>
     );
 }

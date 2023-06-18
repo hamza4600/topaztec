@@ -9,11 +9,13 @@ export default function App({ Component, pageProps }) {
     return (
         <ThemeProvider theme={themes.light}>
             <GlobalStyles />
-            <Navbar />
-            <main>
-                <Component {...pageProps} />
-            </main>
-            <FooterComponent />
+            <div className="page-container">
+                <Navbar />
+                <main>
+                    <Component {...pageProps} />
+                </main>
+                <FooterComponent />
+            </div>
         </ThemeProvider>
     );
 }

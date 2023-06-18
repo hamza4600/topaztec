@@ -21,7 +21,7 @@ const social = [
 
 const CopyWrapper = styled.div`
     margin-top: 2rem;
-    border-top: 1px solid #fff;
+    border-top: 1px solid black;
     padding-top: 2rem;
     font-size: 13px;
     display: flex;
@@ -29,14 +29,17 @@ const CopyWrapper = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
-    // color: ${(props) => props.theme.footerText};
-    color: #fff;
 
     i {
         width: 0.286rem;
         height: 0.286rem;
         background-color: #fff;
         margin: 0 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding-bottom: 2rem;
     }
 `;
 
@@ -77,21 +80,19 @@ const RightSide = () => {
         </>
     );
 };
-const CopyRight = () => {
-    return (
-        <>
-            <CopyWrapper>
-                <span>CopyRight © 2021 Topz</span>
-                <i></i>
-                <span>All rights reserved</span>
-                <i></i>
-                <span>Privacy Policy</span>
-                <i></i>
-                <span>Terms of Service</span>
-            </CopyWrapper>
-        </>
-    );
-};
+const CopyRight = () => (
+    <>
+        <CopyWrapper>
+            <span>CopyRight © 2021 Topz</span>
+            <i></i>
+            <span>All rights reserved</span>
+            <i></i>
+            <span>Privacy Policy</span>
+            <i></i>
+            <span>Terms of Service</span>
+        </CopyWrapper>
+    </>
+);
 const FooterComponent = () => {
     return (
         <>

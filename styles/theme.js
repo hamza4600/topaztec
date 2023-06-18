@@ -5,7 +5,7 @@ const lightTheme = {
     font: "Poppins, sans-serif",
     body: '#fff',
     text: '#000',
-    footer : '#000',
+    footer : '#fff',
 
 }
 
@@ -64,5 +64,12 @@ export const GlobalStyles = createGlobalStyle`
 
     main {
         min-height: 90vh;
+        padding-top: 120px;
+    }
+
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
 `;

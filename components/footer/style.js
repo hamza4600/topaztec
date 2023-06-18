@@ -5,7 +5,6 @@ export const Footer = styled.footer`
     padding: 7.143rem 0 2.571rem;
     background-color: ${(props) => props.theme.footer};
 
-
     @media screen and (max-width: 768px) {
         padding: 0 1rem;
     }
@@ -28,8 +27,9 @@ export const SectionOne = styled.div`
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
-        align-items: flex-start;
-
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .row {
@@ -42,17 +42,8 @@ export const SectionOne = styled.div`
     .row > div:first-child {
         margin-left: 2rem !important;
     }
-  
-    @media screen and (max-width: 1350px) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 
     @media screen and (max-width: 1250px) {
-        
-        flex-direction: column;
-        padding-left: 16px;
-        padding-right: 16px;
 
         .imgwrap h1 {
             font-size: 1.5rem;
@@ -63,15 +54,17 @@ export const SectionOne = styled.div`
             width: 100%;
             height: 100%;
         }
-        .row {
-            margin-top: 6rem;
-            margin-bottom: 5rem;
-        }
     }
 
     @media screen and (max-width: 768px) {
         
         margin-top: 4.6rem;
+        padding: 0 1rem;
+
+        .col {
+            flex-direction: column;
+        }
+        
         .row {
             width: 100%;            
             display: grid;
@@ -120,7 +113,6 @@ export const ItemList = styled.div`
         a {
             font-size: 16px;
             font-weight: 400;
-            color: #fff;   
             cursor: pointer;
             margin-bottom: 0.8rem;
             text-transform: capitalize;

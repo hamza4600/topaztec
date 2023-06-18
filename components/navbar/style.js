@@ -21,6 +21,14 @@ export const Nav = styled.nav`
         align-items: center;
     }
 
+    
+    @media screen and (min-width: 1400px) {
+        #inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
     .cursor {
         cursor: pointer;
     }
@@ -65,7 +73,7 @@ export const List = styled.ul`
     }
 
     #button {
-        padding: 0.5rem 1.5rem;
+        padding: 8px 16px;
         border-radius: 5px;
         background-color: #f3911e;
         color: #fff;

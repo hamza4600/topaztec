@@ -36,7 +36,7 @@ const MobileNavItems = ({ onClick, current }) => {
                             src={icon.src}
                             alt="logo"
                             width="100px"
-                            height="100px"
+                            height="90px"
                         />
                     </Link>
 
@@ -114,59 +114,65 @@ const Navbar = () => {
 
     return (
         <>
-            <Nav open={open} aria-label="nav">
-                <div id="first">
-                    <Link aria-label="logo" href="/">
-                        <div>
-                            <img
-                                src={icon.src}
-                                alt="logo"
-                                style={{ width: "100px", height: "100px" }}
-                            />
+            <Nav open={open} aria-label="nav" className="max-width">
+                <div id="inner">
+                    <div id="first">
+                        <Link aria-label="logo" href="/">
+                            <div>
+                                <img
+                                    src={icon.src}
+                                    alt="logo"
+                                    style={{ width: "100px", height: "90px" }}
+                                />
+                            </div>
+                        </Link>
+                        <div
+                            type="button"
+                            aria-label="menu"
+                            aria-expanded={open}
+                        >
+                            {mobile ? (
+                                <>
+                                    {open ? (
+                                        <AiOutlineClose
+                                            aria-label="close"
+                                            size={28}
+                                            onClick={handleOpen}
+                                            className="cursor"
+                                        />
+                                    ) : (
+                                        <SlMenu
+                                            aria-label="menu"
+                                            size={23}
+                                            onClick={handleOpen}
+                                            className="cursor"
+                                            color={"black"}
+                                        />
+                                    )}
+                                </>
+                            ) : (
+                                <>
+                                    <List aria-label="nav list">
+                                        {navitems.map((item) => (
+                                            <NavItem
+                                                key={item.id}
+                                                item={item}
+                                                current={router.pathname}
+                                                id={item?.type}
+                                            >
+                                                {item.name}
+                                            </NavItem>
+                                        ))}
+                                    </List>
+                                </>
+                            )}
+                            {open && mobile && (
+                                <MobileNavItems
+                                    onClick={handleOpen}
+                                    current={router.pathname}
+                                />
+                            )}
                         </div>
-                    </Link>
-                    <div type="button" aria-label="menu" aria-expanded={open}>
-                        {mobile ? (
-                            <>
-                                {open ? (
-                                    <AiOutlineClose
-                                        aria-label="close"
-                                        size={28}
-                                        onClick={handleOpen}
-                                        className="cursor"
-                                    />
-                                ) : (
-                                    <SlMenu
-                                        aria-label="menu"
-                                        size={23}
-                                        onClick={handleOpen}
-                                        className="cursor"
-                                        color={"black"}
-                                    />
-                                )}
-                            </>
-                        ) : (
-                            <>
-                                <List aria-label="nav list">
-                                    {navitems.map((item) => (
-                                        <NavItem
-                                            key={item.id}
-                                            item={item}
-                                            current={router.pathname}
-                                            id={item?.type}
-                                        >
-                                            {item.name}
-                                        </NavItem>
-                                    ))}
-                                </List>
-                            </>
-                        )}
-                        {open && mobile && (
-                            <MobileNavItems
-                                onClick={handleOpen}
-                                current={router.pathname}
-                            />
-                        )}
                     </div>
                 </div>
             </Nav>
