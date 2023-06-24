@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Svg from "./svg";
 import img from "../../public/icon/clutch.png";
+import OurSkills from "./ourSkills";
+import BenifitSection from "./benifits";
 
 const SectionOneWrapper = styled.section`
     padding: 0 4rem;
@@ -223,6 +225,8 @@ const IndexPage = () => {
         <>
             <SectionOne />
             <ClutchReviews />
+            <OurSkills />
+            <BenifitSection />
         </>
     );
 };
