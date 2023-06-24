@@ -183,14 +183,14 @@ const TextCardWrapper = styled.div`
     height : 100%;
 
     .head {
-        font-size : 1.7rem;
+        font-size : 16px;
         margin-bottom : 1.7rem;
         font-weight: 600;
         line-height: 1.5;
     }
     .text {
         p {
-            font-size : 16px;
+            font-size : 14px;
             font-weight: 400;
             line-height: 1.5;
             color: #666666;
@@ -206,7 +206,7 @@ const TextCardWrapper = styled.div`
             border: none;
             padding: 0.714rem 1.429rem;
             border-radius: 0.357rem;
-            font-size: 1rem;
+            font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
             cursor: pointer;
@@ -224,21 +224,42 @@ const BoxWrapper = styled.div`
     height: 100%;
     position: relative;
     margin-left: 1.429rem;
+    border-top: 5px solid #3f22b6;
 
-    // before
-
-    &:before {
-        position: absolute;
-        top: 0;
-        bottom: auto;
-        left: 0;
-        right: 0;
-        height: 0.714rem;
-        background-color: #7055DE;
+    .head {
+        font-size : 14px;
+        margin-bottom : 1.7rem;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+    .text {
+        font-size : 14px;
+        margin-bottom : 1.7rem;
+        color: #666666;
+        line-height: 1.8;
+        font-weight: 400;
     }
 
+    ul {
+        list-style: none;;
+        color: #666666;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        
 
+        li {
+            background: url('https://itmonks.com/wp-content/themes/it-monks/public/img/icons.svg#check-view');
+            padding-left: 1.857rem;
+            background-size: 1rem 0.929rem;
+            background-repeat: no-repeat;
+            background-position: left top 0.271rem;
 
+            font-size: 14px;
+            margin-bottom: 1.143rem;
+            font-weight: 400;
+            line-height: 1.5
+        }
+    }
 
 `;
 const TextCard = () => (
@@ -271,6 +292,11 @@ const TextBox = () => {
                 <p>
                 Our most popular service is to host remote WordPress developers and development teams, but we also offer custom WordPress theme development on a per-project basis where each website is quoted separately.
                 </p>
+                <ul>
+                    <li>WordPress theme development</li>
+                    <li>WordPress theme development</li>
+                    <li>WordPress theme development</li>
+                </ul>
             </div>
         </BoxWrapper>
     )
