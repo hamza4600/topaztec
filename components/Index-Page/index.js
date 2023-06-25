@@ -112,7 +112,7 @@ const ClutchWrapper = styled.section`
     margin-top: 5rem;
     background-color: #7055de;
     min-height: 12vh;
-    user-select: none;
+    // user-select: none;
 
     .inner-clutch {
         padding: 0 4rem;

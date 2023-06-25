@@ -53,7 +53,7 @@ const MobileNavItems = ({ onClick, current }) => {
                             size={25}
                             onClick={onClick}
                             className="cursor"
-                            color="white"
+                            color="black"
                             tabIndex="0"
                             aria-label="close"
                         />
@@ -118,11 +118,10 @@ const Navbar = () => {
                 <div id="inner">
                     <div id="first">
                         <Link aria-label="logo" href="/">
-                            <div>
+                            <div className="img-wrap">
                                 <img
                                     src={icon.src}
                                     alt="logo"
-                                    style={{ width: "100px", height: "90px" }}
                                 />
                             </div>
                         </Link>

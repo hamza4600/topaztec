@@ -37,16 +37,31 @@ export const Nav = styled.nav`
         color: #f3911e;
     }
 
+    .img-wrap {
+        width: 100px; 
+        height: 90px;
+
+        img {
+            width : 100%;
+            height: 100%;
+            object-fit : contain;
+        }
+    }
     @media screen and (max-width: 768px) {
         padding: 0 16px;
         #first {
             height: 70px;
-            margin-top: ${({ open }) => (open ? "0px" : "28px")};
+            margin-top: ${({ open }) => (open ? "0px" : "24px")};
 
             img {
                 width: 108px;
             }
         }
+
+        .img-wrap {
+            height: 60px;
+        }
+
     }
 `;
 export const List = styled.ul`
@@ -95,12 +110,12 @@ export const List = styled.ul`
 `;
 
 export const MobileNav = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background-color: black;
+    height: 100%;
+    background-color: white;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -112,7 +127,7 @@ export const MobileNav = styled.div`
         margin-bottom: 23px;
         font-size: 30px;
         font-weight: 500;
-        color: white;
+        color: black;
         transition: all 0.5s ease-in-out;
         cursor: pointer;
         text-transform: uppercase;

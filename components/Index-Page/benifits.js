@@ -6,7 +6,11 @@ const BenifitWrapper = styled.section`
 
     max-width: 100%;
     padding-bottom: 5rem;
-    pointer-events: none;
+    // pointer-events: none;
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: 0rem;
+    }
 `;
 
 const CustomerWrapper = styled.div`
@@ -31,6 +35,25 @@ const CustomerWrapper = styled.div`
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 3.857rem 0 2.714rem;
+    
+        .inner-cus {
+            padding : 0 1rem;
+        }
+
+        .flex {
+            flex-direction: column-reverse;
+            gap : 1.5rem;
+        }
+    
+        .text {
+            margin-bottom: 0.857rem;
+        }
+
+        
     }
 `;
 
@@ -155,6 +178,15 @@ const CompanyWrapper = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    @media screen and (max-width: 768px) {
+        min-height : unset;
+        padding : 3rem 1rem;
+        padding-bottom : 0rem;
+        .flex-con {
+            flex-direction: column;
+        }
 
     }
 
@@ -196,6 +228,21 @@ const TextCardWrapper = styled.div`
             cursor: pointer;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        padding : 1rem;
+
+        .btn {
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .text {
+            p {
+                margin-bottom : 0.8rem;
+            }
+        }
+    }
 `;
 
 const BoxWrapper = styled.div`
@@ -227,8 +274,6 @@ const BoxWrapper = styled.div`
     ul {
         list-style: none;;
         color: #666666;
-        margin-bottom: 1.5rem;
-        margin-top: 1.5rem;
         
 
         li {
@@ -244,6 +289,26 @@ const BoxWrapper = styled.div`
             line-height: 1.5
         }
     }
+
+    @media screen and (max-width: 768px) {
+        padding : 2.286rem 1rem;
+        margin-left: 0rem;
+
+        .text {
+            margin-bottom : 0rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            
+            li {
+                margin-bottom : 1rem;   
+            }
+        }
+
+    }
+
 
 `;
 const TextCard = () => (

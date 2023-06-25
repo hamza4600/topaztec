@@ -20,6 +20,14 @@ const ContactWrapper = styled.section`
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: #f5f6f9;
+
+    @media screen and (max-width: 768px) {
+        padding : 0 1rem;
+
+        .inner {
+            flex-direction : column;
+        }
+    }
 `;
 
 const TextCardWrapper = styled.div`
@@ -56,12 +64,21 @@ const FormWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: 1.5rem;
+    }
 `;
 
 const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media screen and (max-width: 768px) {
+        display : none;
+    }
 `;
 
 const FormContainer = styled.form`
@@ -198,6 +215,17 @@ const FormContainer = styled.form`
             font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .row {
+            flex-direction : column;
+            gap: 1rem;
+
+            input {
+                width: 100%;
+            }
         }
     }
 `;

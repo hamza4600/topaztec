@@ -5,7 +5,13 @@ const SkillWrapper = styled.section`
     padding: 0 4rem;
     max-width: 100%;
     padding-top: 5rem;
-    pointer-events: none;
+    // pointer-events: none;
+
+    @media screen and (max-width: 768px) {
+        
+        padding-top: 3rem;
+        padding : 0 1rem;
+    }
 `;
 
 const HeadWrapper = styled.div`
@@ -26,6 +32,12 @@ const HeadWrapper = styled.div`
         font-weight: 700;
         margin-bottom: 1rem;
     }
+    
+    @media screen and (max-width: 768px) {
+        h2 {
+            font-size : 24px;
+        }
+    }
 `;
 
 const ImaeWrapper = styled.div`
@@ -38,6 +50,11 @@ const ImaeWrapper = styled.div`
         width: 80%;
         height: 100%;
     }
+
+    @media screen and (max-width: 768px) {
+        position : relative;
+        margin-top : 1.5rem;
+    }
 `;
 
 const DesWraper = styled.div`
@@ -45,6 +62,13 @@ const DesWraper = styled.div`
     flex-direction: row;
     gap: 2.8rem;
     margin-top: 8rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 0rem;
+        gap : 2rem;
+        margin-bottom : 2.2rem;
+    }
 `;
 
 const data = [

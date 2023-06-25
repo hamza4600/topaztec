@@ -72,4 +72,10 @@ export const GlobalStyles = createGlobalStyle`
         flex-direction: column;
         position: relative;
     }
+
+    @media screen and (max-width: 768px) {
+        main {
+            overflow-x : hidden ;
+        }
+    }
 `;
