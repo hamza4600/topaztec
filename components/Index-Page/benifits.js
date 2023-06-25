@@ -49,22 +49,6 @@ const Stars = styled.div`
     background-size: 100%;
     position: relative;
 
-    // &:nth-child(2) {
-    //     background-position: -1.429rem 0;
-    //     animation: bounce 1s infinite;
-    // }
-
-    // @keyframes bounce {
-    //     0% {
-    //         transform: translateY(0);
-    //     }
-    //     50% {
-    //         transform: translateY(-0.5rem);
-    //     }
-    //     100% {
-    //         transform: translateY(0);
-    //     }
-    // }
 `;
 
 const UserCardWrapper = styled.div`

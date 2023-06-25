@@ -5,7 +5,6 @@ const SkillWrapper = styled.section`
     padding: 0 4rem;
     max-width: 100%;
     padding-top: 5rem;
-    padding-bottom: 5rem;
     pointer-events: none;
 `;
 
