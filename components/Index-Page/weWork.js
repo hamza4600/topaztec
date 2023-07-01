@@ -109,7 +109,8 @@ const PartOne = () => {
         <PartOneWrapper>
             <div>
                 <h2>
-                    We're lucky to work with great people, companies and leading
+
+                    We {"'"} re lucky to work with great people, companies and leading
                     brands <span>in the World</span>
                 </h2>
             </div>
