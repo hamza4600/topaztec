@@ -7,10 +7,16 @@ export const Nav = styled.nav`
     left: 0;
     z-index: 100;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: ${({ theme }) => theme.nav.background};
+    color: ${({ theme }) => theme.nav.color} !important;
+    box-shadow: ${({ theme }) => theme.nav.boxShadow};
     
-    transition: all 0.5s ease-in-out;
+    transition: all 0.1s ease-in-out;
+
+    svg {
+        color: ${({ theme }) => theme.nav.icon} !important;
+
+    }
 
     #first {
         position: relative;
@@ -51,7 +57,7 @@ export const Nav = styled.nav`
         padding: 0 16px;
         #first {
             height: 70px;
-            margin-top: ${({ open }) => (open ? "0px" : "24px")};
+            // margin-top: ${({ open }) => (open ? "0px" : "24px")};
 
             img {
                 width: 108px;
@@ -70,35 +76,33 @@ export const List = styled.ul`
     flex-direction: row;
     align-items: center;
     list-style: none;
-    transition: all 0.5s ease-in-out;
 
     a {
         margin: 0 1rem;
         font-size: 16px;
         font-weight: 500;
-        color: ${({ carrer }) => (carrer ? "#fff" : "#000" )};
-        transition: all 0.15s ease-in-out;
+        // color: ${({ carrer }) => (carrer ? "#fff" : "#000" )};
+        color: inherit;
         cursor: pointer;
         text-transform: capitalize;
         text-decoration: none;
 
         &:hover {
-            color: #f3911e;
+            color: #7055DE;
         }
     }
 
     #button {
         padding: 8px 16px;
         border-radius: 5px;
-        background-color: #f3911e;
+        background-color: #7055DE;
         color: #fff;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
-        transition: all 0.15s ease-in-out;
         cursor: pointer;
 
         &:hover {
-            background-color: #f3911e;
+            background-color: #7055DE;
             color: #fff;
         }
 
@@ -115,7 +119,7 @@ export const MobileNav = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #7055DE;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -124,22 +128,14 @@ export const MobileNav = styled.div`
     transition: all 0.5s ease-in;
 
     a {
-        margin-bottom: 23px;
+        margin-bottom: 28px;
         font-size: 30px;
-        font-weight: 500;
-        color: black;
+        font-weight: 700;
+        color: white;
         transition: all 0.5s ease-in-out;
         cursor: pointer;
         text-transform: uppercase;
         text-decoration: none;
-
-        &:hover {
-            color: #f3911e;
-        }
-        // also on click
-        &:focus {
-            color: #f3911e;
-        }
     }
 
     hr {
@@ -151,6 +147,10 @@ export const MobileNav = styled.div`
         width: -webkit-fill-available;
         margin-bottom: 5rem;
     }
+
+    svg {
+        color: white !important;
+    }
 `;
 
 export const MobileNavHeader = styled.header`
@@ -161,7 +161,8 @@ export const MobileNavHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
-    margin-top: 28px;
+    margin-top: 18px;
+    margin-bottom: 28px;
 
     .no-outline {
         outline: none;
@@ -170,4 +171,15 @@ export const MobileNavHeader = styled.header`
             outline: none;
         }
     }
+
+    .img-wrap {
+        
+        height: 60px;
+
+        img {
+            width: 108px;
+            object-fit: contain;
+        }
+    }
+
 `;

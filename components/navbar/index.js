@@ -32,12 +32,12 @@ const MobileNavItems = ({ onClick, current }) => {
             <MobileNav>
                 <MobileNavHeader aria-label="mobile nav header">
                     <Link href="/">
-                        <img
-                            src={icon.src}
-                            alt="logo"
-                            width="100px"
-                            height="90px"
-                        />
+                        <div className="img-wrap">
+                            <img
+                                src={icon.src}
+                                alt="logo"
+                            />
+                        </div>
                     </Link>
 
                     <div
@@ -56,11 +56,11 @@ const MobileNavItems = ({ onClick, current }) => {
                             color="black"
                             tabIndex="0"
                             aria-label="close"
+                            
                         />
                     </div>
                 </MobileNavHeader>
-                <hr />
-
+               
                 {navitems.map((item) => (
                     <a
                         key={item.id}

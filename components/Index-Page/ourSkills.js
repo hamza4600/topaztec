@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { skillData } from "./data";
 
 const SkillWrapper = styled.section`
     min-height: 40vh;
@@ -71,27 +72,6 @@ const DesWraper = styled.div`
     }
 `;
 
-const data = [
-    {
-        id: 1,
-        title: "WordPress Development",
-        description:
-            "We are a WordPress development agency that specializes in building custom WordPress themes and plugins. We have over 10 years of experience working with WordPress and would love to help you with your next project.",
-    },
-    {
-        id: 2,
-        title: "WordPress Development",
-        description:
-            "We are a WordPress development agency that specializes in building custom WordPress themes and plugins. We have over 10 years of experience working with WordPress and would love to help you with your next project.",
-    },
-    {
-        id: 3,
-        title: "WordPress Development",
-        description:
-            "We are a WordPress development agency that specializes in building custom WordPress themes and plugins. We have over 10 years of experience working with WordPress and would love to help you with your next project.",
-    },
-];
-
 const CardWrapper = styled.div`
     h3 {
         font-size: 16px;
@@ -122,7 +102,7 @@ const Crad = ({ title, description }) => {
 const HeaderDescription = () => {
     return (
         <DesWraper>
-            {data.map((item) => {
+            {skillData.map((item) => {
                 return (
                     <Crad
                         key={item.id}

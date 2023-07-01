@@ -4,8 +4,7 @@ import Head from "next/head";
 
 const seo = {
     title: "",
-    description:
-        "",
+    description: "",
     url: "",
     image: "",
     twitter: "",
@@ -13,11 +12,11 @@ const seo = {
     card: "",
     site: "",
 
-    keywords:
-        "web development, E-commerce development, no code develop",
+    keywords: "web development, E-commerce development, no code develop",
 };
 
 export default function Home() {
+
     return (
         <>
             <Head>
@@ -25,7 +24,8 @@ export default function Home() {
                 {/* <title>{seo.title}</title>
                 <SeoCard seo={seo} keywords={seo.keywords} /> */}
             </Head>
-                <IndexPage />
+            <IndexPage />
+           
         </>
     );
 }

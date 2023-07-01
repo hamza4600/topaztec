@@ -6,14 +6,51 @@ const lightTheme = {
     body: '#fff',
     text: '#000',
     footer : '#fff',
+    nav : {
+        background: '#fff',
+        color: '#000',
+        boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+        icon : '#000',
+    },
+    secOne : {
+        p : '#666',
+    },
+    clutch : "#F5F6F9",
+    doCard : {
+        background : "linear-gradient(180deg, #f5f6f9 0%, #ffffff 100%)",
+        color : "#666",
+        boxShadow : "0px 4px 20px rgba(0, 0, 0, 0.25)"
+    },
+    workCard : {
+        background : "#fff",
+    }
 
 }
 
 const darkTheme = {
     font: "Poppins, sans-serif",
-    body: '#363537',
+    body: '#1F1E1E',
     text: '#FAFAFA',
     footer : '#fff',
+    nav : {
+        background: '#1F1E1E',
+        color: '#FAFAFA',
+        boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+        icon : '#7055DE',
+    },
+    secOne : {
+        p : '#fff',
+    },
+    clutch : "#3A3A3A",
+    doCard : {
+        background : "linear-gradient(180deg, #3A3A3A 0%, rgba(58, 58, 58, 0.5) 100%)",
+        color : "#fff",
+        boxShadow : "0px 4px 20px rgba(0, 0, 0, 0.25)"
+    },
+    workCard : {
+        background : "#1F1E1E",
+    }
+
 }
 
 export const themes = {
