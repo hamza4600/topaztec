@@ -11,8 +11,6 @@ export const Nav = styled.nav`
     color: ${({ theme }) => theme.nav.color} !important;
     box-shadow: ${({ theme }) => theme.nav.boxShadow};
     
-    transition: all 0.1s ease-in-out;
-
     svg {
         color: ${({ theme }) => theme.nav.icon} !important;
 
@@ -125,14 +123,12 @@ export const MobileNav = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    transition: all 0.5s ease-in;
 
     a {
         margin-bottom: 28px;
         font-size: 30px;
         font-weight: 700;
         color: white;
-        transition: all 0.5s ease-in-out;
         cursor: pointer;
         text-transform: uppercase;
         text-decoration: none;

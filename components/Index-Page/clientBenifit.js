@@ -104,7 +104,7 @@ const PartOne = () =>  (
         <PartOneWrapper>
             <div className="sub-title">BENEFITS OF WORKING WITH US</div>
             <div className="title">Building the best sites for the best brands</div>
-            <p>Quality first has always been our approach, and we always make an extra effort toward your product's perfection.</p>
+            <p>Quality first has always been our approach, and we always make an extra effort toward your product{"'"}s perfection.</p>
             <div className="img-wrap">
                 <div className="inner">
                     <img src="https://itmonks.com/wp-content/themes/it-monks/public/img/working_anim.svg" alt="working_anim" />

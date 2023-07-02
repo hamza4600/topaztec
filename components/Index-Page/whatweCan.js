@@ -12,6 +12,11 @@ const Wrapper = styled.section`
 
     @media screen and (max-width: 1024px) {
         padding: 3rem 0;
+
+        .container {
+            max-width: 100%;
+            padding: 0 2rem;
+        }
     }
 
 `;
@@ -76,7 +81,6 @@ const PartTwoWrapper = styled.div`
     .item {
         width: 50%;
         padding: 1rem;
-
     }
 
     .inline {
@@ -118,6 +122,16 @@ const PartTwoWrapper = styled.div`
         
         .item {
             padding: 0rem;
+        }
+
+        p {
+            width: 100%;
+        }
+
+        .inline {
+            .title {
+                font-size: 18px;
+            }
         }
     }
 

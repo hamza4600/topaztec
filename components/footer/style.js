@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Footer = styled.footer`
     width: 100%;
     padding: 7.143rem 0 2.571rem;
-    background-color: ${(props) => props.theme.footer};
+    background-color: ${(props) => props.theme.footer.background};
 
     @media screen and (max-width: 768px) {
         padding: 0 1rem;
@@ -97,11 +97,10 @@ export const ItemList = styled.div`
     margin-left: 80px;
 
     h2 {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
         font-weight: 500;
         text-transform: uppercase;
-        color: #F3911E;
     }
 
     ul {
@@ -111,7 +110,7 @@ export const ItemList = styled.div`
         flex-direction: column;
         
         a {
-            font-size: 16px;
+            font-size: 13px;
             font-weight: 400;
             cursor: pointer;
             margin-bottom: 0.8rem;
@@ -131,7 +130,7 @@ export const ItemList = styled.div`
 
         ul {
             a {
-                font-size: 14px;
+                font-size: 13px;
             }
         }
     }

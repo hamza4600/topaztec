@@ -19,11 +19,12 @@ const ContactWrapper = styled.section`
     padding: 0 4rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #f5f6f9;
+    background-color: ${({ theme }) => theme.benifit.background};
 
     @media screen and (max-width: 768px) {
         padding : 0 1rem;
-
+        padding-top: 1rem;
+        padding-bottom: 3rem;
         .inner {
             flex-direction : column;
         }
@@ -45,7 +46,7 @@ const TextCardWrapper = styled.div`
             font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
-            color: #666666;
+            color: ${({ theme }) => theme.benifit.text};
         }
     }
 `;
@@ -86,13 +87,12 @@ const FormContainer = styled.form`
     flex-direction: column;
 
     input {
-        background-color: #fff;
+        background-color: ${({ theme }) => theme.benifit.inputs};
         padding: 11px;
-        transition: 0.192s color ease;
         display: inline-block;
         vertical-align: top;
         text-align: left;
-        color: #000;
+        color: ${({ theme }) => theme.benifit.text};
         width: 100%;
         font-weight: 400;
         border: 0.071rem solid #c1c5cf;
@@ -120,13 +120,12 @@ const FormContainer = styled.form`
     }
 
     textarea {
-        background-color: #fff;
+        background-color:  ${({ theme }) => theme.benifit.inputs};
         padding: 11px;
-        transition: 0.192s color ease;
         display: inline-block;
         vertical-align: top;
         text-align: left;
-        color: #000;
+        color: ${({ theme }) => theme.benifit.text};
         width: 100%;
         font-weight: 400;
         font-family: inherit;
@@ -173,7 +172,7 @@ const FormContainer = styled.form`
             font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
-            color: #666666;
+            color: ${({ theme }) => theme.benifit.text};
         }
     }
 
@@ -184,10 +183,9 @@ const FormContainer = styled.form`
         margin-top: 1rem;
 
         button {
-            background-color: #000;
+            background-color: #7055DE;
             color: #fff;
             padding: 11px 20px;
-            transition: 0.192s color ease;
             outline: none;
             border: 1px solid white;
             border-radius: 0.357rem;
@@ -203,15 +201,15 @@ const FormContainer = styled.form`
 
             // disabled
             &:disabled {
-                background-color: #c1c5cf;
+                background-color: #7055DF;
                 color: #fff;
-                border: 0.071rem solid #c1c5cf;
+                border: 0.071rem solid #7055DF;
                 cursor: not-allowed;
             }
         }
 
         .text {
-            color: #666666;
+            color: ${({ theme }) => theme.benifit.text};;
             font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
@@ -243,14 +241,14 @@ const Item = styled.li`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid #6666;
+    border: 1px solid ${({ theme }) => theme.benifit.text};
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 
     svg {
-        color: #6666;
+        color: ${({ theme }) => theme.benifit.text};;
     }
 
     &:hover {
@@ -316,14 +314,14 @@ const Card = styled.div`
             font-size: 16px;
             font-weight: 500;
             line-height: 1.5;
-            color: #000;
+            color: ${({ theme }) => theme.benifit.text};;
         }
 
         p {
             font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
-            color: #666666;
+            color: ${({ theme }) => theme.benifit.text};;
         }
 
         a {
@@ -337,8 +335,7 @@ const Card = styled.div`
 `;
 
 // contact User
-const ContactUserCrad = () => {
-    return (
+const ContactUserCrad = () => (
         <Card>
             <div className="img-wrap">
                 <img
@@ -353,7 +350,6 @@ const ContactUserCrad = () => {
             </div>
         </Card>
     );
-};
 
 const ClutchWrapper = styled.div`
     
@@ -391,7 +387,7 @@ const ClutchWrapper = styled.div`
         font-size: 14px;
         font-weight: 400;
         line-height: 1.5;
-        color: #666666;
+        color: ${({ theme }) => theme.benifit.text};;
         margin-bottom: 0.357rem;
     }
 

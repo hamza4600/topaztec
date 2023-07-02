@@ -21,7 +21,7 @@ const social = [
 
 const CopyWrapper = styled.div`
     margin-top: 2rem;
-    border-top: 1px solid black;
+    border-top: 1px solid ${({ theme }) => theme.footer.text};
     padding-top: 2rem;
     font-size: 13px;
     display: flex;
@@ -33,13 +33,17 @@ const CopyWrapper = styled.div`
     i {
         width: 0.286rem;
         height: 0.286rem;
-        background-color: #fff;
+        background-color: ${({ theme }) => theme.footer.text};
         margin: 0 0.5rem;
     }
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
         padding-bottom: 2rem;
+
+        i {
+            margin: 0.5rem 0;
+        }
     }
 `;
 
@@ -93,25 +97,23 @@ const CopyRight = () => (
         </CopyWrapper>
     </>
 );
-const FooterComponent = () => {
-    return (
-        <>
-            <Footer>
-                <SectionOne id="ftone">
-                    <div className="col">
-                        <RightSide />
+const FooterComponent = () => (
+    <>
+        <Footer>
+            <SectionOne id="ftone">
+                <div className="col">
+                    <RightSide />
 
-                        <div className="row">
-                            <FooterItem title="design" list={deign} />
-                            <FooterItem title="develop" list={develop} />
-                            <FooterItem title="follow" list={social} />
-                        </div>
+                    <div className="row">
+                        <FooterItem title="design" list={deign} />
+                        <FooterItem title="develop" list={develop} />
+                        <FooterItem title="follow" list={social} />
                     </div>
-                    <CopyRight />
-                </SectionOne>
-            </Footer>
-        </>
-    );
-};
+                </div>
+                <CopyRight />
+            </SectionOne>
+        </Footer>
+    </>
+);
 
 export default FooterComponent;

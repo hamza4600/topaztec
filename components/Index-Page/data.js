@@ -1046,3 +1046,42 @@ export const solutionsArray = [
         desc : "As web experts with many years of experience, we understand that WordPress is no longer a blogging CMS and can be pushed out of limits and used as a portal, job listing platform, or directory website. Company portal development is also part of our solution portfolio. For example, online job platforms with over 100,000 job advertisements have been implemented in the past, which aggregate jobs from more than ten sources."
     }
 ];
+
+export const projectsArray = [
+    {
+        id : 1,
+        title : "Ruuvi",
+        span : "COMPLEX DEVELOPMENT",
+        des : "Finish tech start-up aiming to rewrite the traditional ways how we’re measuring our environment.",
+        img1 : "https://itmonks.com/wp-content/uploads/2022/10/main-ruuvi-min-1024x648.jpg",
+        img2 : "https://itmonks.com/wp-content/uploads/2022/10/Ruuvi_Side-min.jpg",
+        url : "https://ruuvi.com/"
+    },
+    {
+        id : 2,
+        title : "ValorX",
+        span : "UI/UX & COMPLEX DEVELOPMENT",
+        des : "ValorX is a SaaS company based in California. They provide a premium service that integrates with all CRMs.",
+        img1 : "https://itmonks.com/wp-content/uploads/2022/10/main-valorx-min-1024x636.jpg",
+        img2 : "https://itmonks.com/wp-content/uploads/2022/10/valorx-1024x825.jpg",
+        url : "https://valorx.com/"
+    },
+    {
+        id : 3,
+        title : "Daily Nourish",
+        span : "UI/UX & DEVELOPMENT",
+        des : "Australian frozen smoothie delivery subscription service that aims to increase nutritional intake across the country.",
+        img1 : "https://itmonks.com/wp-content/uploads/2022/10/main-dn-min-1024x648.jpg",
+        img2 : "https://itmonks.com/wp-content/uploads/2022/10/side.jpg",
+        url : "https://www.getdailynourish.com/"
+    },
+    {
+        id : 4,
+        title : "Mulax",
+        span : "UI/UX & DEVELOPMENT",
+        des : "Next-generation digital asset exchange that allows traders the opportunity to optimize their portfolio using our innovative, secure platform.",
+        img1 : "https://itmonks.com/wp-content/uploads/2022/10/main-mulax-min-1024x642.jpg",
+        img2 : "https://itmonks.com/wp-content/uploads/2022/10/Mulax_side-min-1.jpg",
+        url : "https://www.digitalasset.com/"
+    },
+]

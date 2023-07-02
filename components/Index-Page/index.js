@@ -18,7 +18,7 @@ const IndexPage = () => {
             <WeDo />
             <WeWorkWith />
             <ClientBenifit />
-            {/* <CaseStudy /> */}
+            <CaseStudy />
             <OurStory />
             <WhatWeCan />
             {/* our solutions */}

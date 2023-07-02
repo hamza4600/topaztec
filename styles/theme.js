@@ -27,6 +27,11 @@ const lightTheme = {
     benifit : {
         background : "#F5F6F9",
         text : "#666",
+        inputs : "#fff",
+    },
+    footer : {
+        background : "#fff",
+        text : "#000",
     }
 
 }
@@ -57,6 +62,11 @@ const darkTheme = {
     benifit : {
         background : "#3A3A3A",
         text : "#fff",
+        inputs : "transparent",
+    },
+    footer : {
+        background : "#1F1E1E",
+        text : "#fff",
     }
 
 }
@@ -78,7 +88,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: ${(props) => props.theme.body};
         color: ${(props) => props.theme.text};
-        transition: all 0.50s linear;
+        // transition: all 0.50s linear;
         font-family: ${(props) => props.theme.font};
     }
 
@@ -118,9 +128,31 @@ export const GlobalStyles = createGlobalStyle`
         position: relative;
     }
 
+    .theme-button {
+        position: fixed;
+        right: 20px;
+        bottom: 50%;
+        z-index: 100;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.50s linear;
+    }
+
     @media screen and (max-width: 768px) {
         main {
             overflow-x : hidden ;
+        }
+
+        .theme-button {
+            top: 20px;
+            bottom: auto;
+            right: 80px;
         }
     }
 `;
