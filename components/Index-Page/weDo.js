@@ -38,7 +38,7 @@ const LeftWrapper = styled.div`
     flex-direction: column;
 
     .span {
-        font-size: 14px;
+        font-size: 13px;
         color: ${(props) => props.theme.doCard.color};
         font-weight: 400;
         margin-bottom: 1rem;
@@ -51,7 +51,7 @@ const LeftWrapper = styled.div`
     }
 
     .des {
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 400;
         margin-bottom: 2rem;
 

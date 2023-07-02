@@ -973,4 +973,76 @@ export const svgArray = [
         </g>
         </svg>
     }
-]
+];
+
+export const benifitArray = [
+    {
+        id : 1,
+        img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Quality.svg",
+        title : "Quality First",
+        p1 : "We code entirely from scratch to ensure page speed and functionality perform at the maximum potential.",
+        p2 : "We follow the industry's best practices and code standards to provide top-ranking websites.",
+    },
+    {
+        id : 2,
+        img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Star.svg",
+        title : "Marketing-Ready Websites",
+        p1: "Have your website re-designed and built from a marketing perspective.",
+        p2 : "We implement the best practices on SEO and Core Web Vitals to have your website showing at the top."
+    },
+    {
+        id : 3,
+        img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Start.svg",
+        title : "Top Talents in Europe",
+        p1: "Our development team consists of high-mid to seniors level developers.",
+        p2 : "Keeping everything in-house helps us ensure timelines are met and maintain pristine communication throughout development."
+    },
+    {
+        id : 4,
+        img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Badge.svg",
+        title : "Specialized",
+        p1 : "Our senior developers have 14+ years of experience in WordPress and have delivered hundreds of outstanding projects.",
+        p2 : "We have worked on countless projects as a team and are always excited to innovate and develop something unavailable on the market."
+    },
+    {
+        id : 5,
+        img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Arrows.svg",
+        title : "Flexible Engagements",
+        p1 : "Our approach is client orientated, which includes being transparent and highly flexible throughout the engagement to meet your needs.",
+        p2 : "We provide weekly progress updates and billing set up to be predictable and estimated upfront to make your budget planning easier."
+    },
+    {
+        id : 6,
+        img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Network.svg",
+        title : "Vast Network",
+        p1 : "Although we don't outsource any core services, we help our clients find vetted service providers from our vast network for jobs out of our scope.",
+        p2 : "Our network also acts as a startup ecosystem where we make constant introductions for our B2B clients."
+    }
+];
+
+export const solutionsArray = [
+    {
+        id : 1,
+        src : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/96/Online.svg",
+        title : "Websites for Publishers",
+        desc : "As an experienced WordPress Agency, we implement and support large online magazines and blogs, including relaunch, SEO, and monetization. We work closely with your editorial team to properly understand their needs and expectation from the publishing platform we are building. Our customers in the field of online publishing have up to 100k concurrent visitors thanks to WordPress VIP hosting. If you are an experienced blogger or have just started, feel free to reach out to us for free consultation and recommendations on making your work easier and more profitable."
+    },
+    {
+        id : 2,
+        src : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/96/Woo2.svg",
+        title : "eCommerce Solutions",
+        desc : "Selling products online might be easy in the beginning. Still, to scale and grow your store, you need the support of professional developers who can help you automate stuff and keep your store running smoothly and securely. We have experience with the most popular delivery and payment gateway services, such as Stripe, PayPal, Mollie, Authorize.Net, Klarna, DHL, UPS, DPD, and many others locally available in many countries of Europe and America. No add-on is available - not a problem; our engineers will develop custom integration for your needs. We conceive, design, and develop professional, comprehensive e-commerce solutions. From presenting products and services to customers and order management to conversion optimization, we are at your disposal as an e-commerce partner."
+    },
+    {
+        id : 3,
+        src : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/96/Feed.svg",
+        title : "Corporate websites",
+        desc : "We will help you to build your company's digital presence on the web and the rest of the digital world. Having such a long experience pushing brands to the next level helps us predict your needs and advise on what you need and where it is worth investing a budget. Corporate sites promote the company (its history, values, commitments, purpose, governance, and Human Resources policy) and not directly its products or solutions."
+    },
+    {
+        id : 4,
+        src : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/96/Website.svg",
+        title : "Custom Web Applications",
+        desc : "As web experts with many years of experience, we understand that WordPress is no longer a blogging CMS and can be pushed out of limits and used as a portal, job listing platform, or directory website. Company portal development is also part of our solution portfolio. For example, online job platforms with over 100,000 job advertisements have been implemented in the past, which aggregate jobs from more than ten sources."
+    }
+];

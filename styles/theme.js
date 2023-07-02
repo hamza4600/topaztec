@@ -23,6 +23,10 @@ const lightTheme = {
     },
     workCard : {
         background : "#fff",
+    },
+    benifit : {
+        background : "#F5F6F9",
+        text : "#666",
     }
 
 }
@@ -49,6 +53,10 @@ const darkTheme = {
     },
     workCard : {
         background : "#1F1E1E",
+    },
+    benifit : {
+        background : "#3A3A3A",
+        text : "#fff",
     }
 
 }

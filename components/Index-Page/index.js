@@ -6,6 +6,9 @@ import ClutchReviews from "./clutchReviews";
 import WeDo from "./weDo";
 import WeWorkWith from "./weWork";
 import ClientBenifit from "./clientBenifit";
+import CaseStudy from "./caseStudy";
+import OurStory from "./ourStory";
+import WhatWeCan from "./whatweCan";
 
 const IndexPage = () => {
     return (
@@ -15,8 +18,12 @@ const IndexPage = () => {
             <WeDo />
             <WeWorkWith />
             <ClientBenifit />
-            <OurSkills />
-            <BenifitSection />
+            {/* <CaseStudy /> */}
+            <OurStory />
+            <WhatWeCan />
+            {/* our solutions */}
+            {/* <OurSkills />
+            <BenifitSection /> */}
             <ContactSection />
         </>
     );

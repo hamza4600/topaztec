@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import WeOffer from "./offer";
-import Svg from "./svg";
+import img from "../../public/images/svg.png";
 
 const SectionOneWrapper = styled.section`
     padding: 0 4rem;
@@ -38,9 +38,10 @@ const SvgWrapper = styled.div`
     width: max-content;
 
     @media (min-width: 1025px) {
-        svg {
+        img {
             width: 35rem !important;
             height: 21rem !important;
+            object-fit: contain;
         }
     }
 
@@ -48,9 +49,10 @@ const SvgWrapper = styled.div`
         width: 100%;
         margin-top: 2rem;
 
-        svg {
+        img {
             width: 100% !important;
             height: 100% !important;
+            object-fit: contain;
         }
     }
 `;
@@ -62,7 +64,7 @@ const TextContainer = styled.div`
     }
 
     p {
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.4;
         margin-top: 1rem;
         margin-bottom: 3rem;
@@ -102,7 +104,7 @@ const SectionOne = () => {
                         <WeOffer />
                     </TextContainer>
                     <SvgWrapper>
-                        <Svg />
+                        <img src={img.src} alt="svg" />
                     </SvgWrapper>
                 </div>
             </SectionOneWrapper>
