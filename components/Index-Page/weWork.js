@@ -115,7 +115,7 @@ const PartOne = () => {
                 </h2>
             </div>
             <a 
-                href="https://calendly.com/topaztec/30min"
+                href="https://calendly.com/topaztec-uk/30min"
                 target="_blank"
                 rel="noopener noreferrer"
             >Join Elite</a>

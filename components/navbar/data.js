@@ -23,7 +23,7 @@ export const navitems = [
         id: 5,
         type : "button",
         name: "get started",
-        link: "https://calendly.com/topaztec/30min",
+        link: "https://calendly.com/topaztec-uk/30min",
         target :"_blank",
         rel :"noopener noreferrer"
     }

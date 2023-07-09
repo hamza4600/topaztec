@@ -42,6 +42,22 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="icon" type="image/svg" href="/icon/topz.jpg"/>
           <link rel="apple-touch-icon" href="/icons/Lf-icon.svg"/>
+
+          {/* google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3Q2KKJG40"></script>
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+      
+              gtag('config', 'G-C3Q2KKJG40');
+              `,
+            }}
+          />
+
         </Head>
         <body>
           {/* <Main /> */}
