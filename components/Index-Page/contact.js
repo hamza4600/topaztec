@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { FaFacebookF } from "react-icons/fa";
-import { BsBehance } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -264,23 +264,35 @@ const SocialIcons = () => {
     return (
         <IconWrapper>
             <Item hoverColor="#0077b5">
-                <a href="https://www.facebook.com/">
+                <a href="https://www.linkedin.com/company/topaztec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaLinkedinIn />
                 </a>
             </Item>
             <Item hoverColor="#1778f2">
-                <a href="https://www.facebook.com/">
+                <a href="https://www.facebook.com/topaztec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaFacebookF />
                 </a>
             </Item>
             <Item hoverColor="#d9317a">
-                <a href="https://www.facebook.com/">
+                <a href="https://www.instagram.com/topaztec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <BsInstagram />
                 </a>
             </Item>
             <Item hoverColor="#1769ff">
-                <a href="https://www.facebook.com/">
-                    <BsBehance />
+                <a href="https://twitter.com/topaztec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <BsTwitter />
                 </a>
             </Item>
         </IconWrapper>
@@ -330,6 +342,11 @@ const Card = styled.div`
             line-height: 1.5;
             color: #7055de;
             text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 `;
@@ -338,15 +355,12 @@ const Card = styled.div`
 const ContactUserCrad = () => (
         <Card>
             <div className="img-wrap">
-                <img
-                    src="https://itmonks.com/wp-content/themes/it-monks/public/img/alex.jpeg"
-                    alt="Alex"
-                />
+                <img src="/images/avatar.jpg" alt="Azar" />
             </div>
             <div className="detail">
                 <h3>Alex</h3>
                 <p>Expert</p>
-                <a href="mailto: ">info@itmonks.com</a>
+                <a href="mailto: topaztec@outlook.com">topaztec@outlook.com</a>
             </div>
         </Card>
     );
@@ -439,6 +453,8 @@ const ContactInfo = () => {
 };
 
 const Form = () => {
+    
+    // submit form 
     return (
         <>
             <FormContainer>
@@ -497,7 +513,14 @@ const ContactForm = () => {
 };
 const ContactSection = () => {
     return (
-        <ContactWrapper>
+        <ContactWrapper
+            id="contact"
+            className="section"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            aria-label="contact"
+            aria-describedby="contact"
+        >
             <div className="inner">
                 <ContactInfo />
                 <ContactForm />

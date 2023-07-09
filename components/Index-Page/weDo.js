@@ -99,7 +99,13 @@ const LeftSide = () => {
                     target audience and convert them into paying customers.
                 </p>
             </div>
-            <a>Learn more</a>
+            <a
+                href="https://calendly.com/topaztec/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Learn more
+            </a>
         </LeftWrapper>
     );
 };
@@ -183,7 +189,6 @@ const RightWrapper = styled.div`
 `;
 
 const RightSide = () => {
-
     // on drag scroll
     const [state, setState] = useState({
         isScrolling: false,
@@ -209,7 +214,7 @@ const RightSide = () => {
             // ref.current.scrollLeft = scrollX - diffX;
             ref.current.scrollTo({
                 left: scrollX - diffX,
-                behavior: 'smooth'
+                behavior: "smooth",
             });
         }
     };
@@ -235,15 +240,13 @@ const RightSide = () => {
     );
 };
 
-const WeDo = () => {
-    return (
-        <Wrapper>
-            <div className="inner">
-                <LeftSide />
-                <RightSide />
-            </div>
-        </Wrapper>
-    );
-};
+const WeDo = () => (
+    <Wrapper id="services" initial="hidden" animate="show">
+        <div className="inner">
+            <LeftSide />
+            <RightSide />
+        </div>
+    </Wrapper>
+);
 
 export default WeDo;

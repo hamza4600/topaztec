@@ -19,8 +19,6 @@ const Twitter = ({ card, site, title, description, image }) => (
     </>
 );
 
-const Keywords = ({ keywords }) => <meta name="keywords" content={keywords} />;
-
 const Apple = ({ title, description, image, url }) => (
     <>
         <meta name="apple-mobile-web-app-title" content={title} />
@@ -34,7 +32,7 @@ const Apple = ({ title, description, image, url }) => (
     </>
 );
 
-const Meta = ({ title, description, image, url, sitename, card, site }) => (
+const Meta = ({ title, description, image, url, sitename, card, site, keywords }) => (
     <>
         <meta name="description" content={description} />
         <meta name="image" content={image} />
@@ -43,6 +41,7 @@ const Meta = ({ title, description, image, url, sitename, card, site }) => (
         <meta name="author" content="Life tech" />
         <meta name="url" content={url} />
         <meta name="sitename" content={sitename} />
+        <meta name="keywords" content={keywords} />
         <OpenGraph
             url={url}
             image={image}
@@ -66,8 +65,7 @@ const Meta = ({ title, description, image, url, sitename, card, site }) => (
     </>
 );
 
-const SeoCard = ({ seo, keywords }) => {
-    const { title, description, image, url, sitename, card, site } = seo;
+const SeoCard = ({ title, description, image, url, sitename, card, site, keywords }) => {
     return (
         <>
             <Meta
@@ -78,8 +76,8 @@ const SeoCard = ({ seo, keywords }) => {
                 sitename={sitename}
                 card={card}
                 site={site}
+                keywords={keywords}
             />
-            {keywords && <Keywords keywords={keywords} />}
         </>
     );
 };

@@ -90,6 +90,7 @@ const TextContainer = styled.div`
 `;
 
 const SectionOne = () => {
+
     return (
         <>
             <SectionOneWrapper>
@@ -100,7 +101,11 @@ const SectionOne = () => {
                             We create powerful websites with stunning visuals
                             that fit your business strategy and customer needs..
                         </p>
-                        <a>Schedule a call</a>
+                        <a
+                            href="https://calendly.com/topaztec/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Schedule a call</a>
                         <WeOffer />
                     </TextContainer>
                     <SvgWrapper>

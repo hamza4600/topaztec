@@ -38,7 +38,7 @@ export const Nav = styled.nav`
     }
 
     .active {
-        color: #f3911e;
+        color: #7055DE;
     }
 
     .img-wrap {

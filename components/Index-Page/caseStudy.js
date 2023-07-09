@@ -210,9 +210,11 @@ const Projects = () => (
     )
 
 const CaseStudy = () =>(
-        <Wrapper>
+        <Wrapper
+            id="portfolio"
+        >
             <div className="title">
-                <h1>Case Studies</h1>
+                <h1>Our Projects</h1>
             </div>
             <Projects />
         </Wrapper>

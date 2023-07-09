@@ -73,6 +73,9 @@ const MobileNavItems = ({ onClick, current }) => {
                         }}
                         aria-current={current === item.link ? "page" : ""}
                         className={current === item.link ? "active" : ""}
+                        onClick={onClick}
+                        ref={item?.ref}
+                        target={item?.target}
                     >
                         {item.name}
                     </a>
@@ -82,17 +85,20 @@ const MobileNavItems = ({ onClick, current }) => {
     );
 };
 
-const NavItem = ({ item, onClick, current, id }) => {
-    const active = current === item.link ? true : false;
+const NavItem = ({ item, onClick, current, id , rel , target , active}) => {
+    const Active = active === item.link ? true : false;
     return (
         <>
             <Link
                 href={item.link}
                 aria-label={item.name}
-                aria-current={active ? "page" : ""}
+                aria-current={Active ? "page" : ""}
                 onClick={onClick}
-                className={active ? "active" : ""}
+                className={Active ? "active" : ""}
                 id={id}
+                rel={rel}
+                target={target}
+
             >
                 {item.name}
             </Link>
@@ -105,7 +111,31 @@ const Navbar = () => {
     const mobile = size.width > 768 ? false : true;
 
     const [open, setOpen] = useState(false);
+    // active link
+    const [active, setActive] = useState("");
 
+    // if scroll to other section active link will change
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const sections = document.querySelectorAll("section");
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (
+                    currentScrollPos >= sectionTop - sectionHeight * 0.25 &&
+                    currentScrollPos < sectionTop + sectionHeight * 0.75
+                ) {
+                    setActive(`#${section.id}`);
+                }
+            });
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    
     const handleOpen = () => {
         setOpen((prev) => !prev);
     };
@@ -158,6 +188,12 @@ const Navbar = () => {
                                                 item={item}
                                                 current={router.pathname}
                                                 id={item?.type}
+                                                rel ={item?.rel}
+                                                target ={item?.target}
+                                                onClick={() => {
+                                                    setActive(item.link);
+                                                }}
+                                                active={active}
                                             >
                                                 {item.name}
                                             </NavItem>

@@ -114,7 +114,11 @@ const PartOne = () => {
                     brands <span>in the World</span>
                 </h2>
             </div>
-            <a href="#">Join Elite</a>
+            <a 
+                href="https://calendly.com/topaztec/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+            >Join Elite</a>
             <div className="img-wrap">
                 <WorkSvg />
             </div>

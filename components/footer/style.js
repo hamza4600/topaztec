@@ -58,7 +58,7 @@ export const SectionOne = styled.div`
 
     @media screen and (max-width: 768px) {
         
-        margin-top: 4.6rem;
+        margin-top: 3.6rem;
         padding: 0 1rem;
 
         .col {

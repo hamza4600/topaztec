@@ -155,7 +155,13 @@ const PartTwo = () => (
 
 const WhatWeCan = () =>{
     return (
-        <Wrapper>
+        <Wrapper
+            id="solution"
+            as="section"
+            ae_in="fadeInUp"
+            ae_dur="1s"
+            ae_delay="0.5s"
+        >
             <div className="container">
                 <PartOne />
                 <PartTwo />

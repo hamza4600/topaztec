@@ -85,10 +85,13 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
+    html {
+        scroll-behavior: smooth !important;
+    }
+    
     body {
         background-color: ${(props) => props.theme.body};
         color: ${(props) => props.theme.text};
-        // transition: all 0.50s linear;
         font-family: ${(props) => props.theme.font};
     }
 
@@ -120,6 +123,7 @@ export const GlobalStyles = createGlobalStyle`
     main {
         min-height: 90vh;
         padding-top: 120px;
+        overflow-x: hidden;
     }
 
     .page-container {

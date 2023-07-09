@@ -14,9 +14,9 @@ const develop = [
     { id: 3, name: "no code develop", link: "/" },
 ];
 const social = [
-    { id: 1, name: "instagram", link: "/" },
-    { id: 2, name: "facebook", link: "/" },
-    { id: 3, name: "twitter", link: "/" },
+    { id: 1, name: "instagram", link: "https://www.instagram.com/topaztec" },
+    { id: 2, name: "Linkedin", link: "https://www.linkedin.com/company/topaztec" },
+    { id: 3, name: "twitter", link: "https://twitter.com/topaztec" },
 ];
 
 const CopyWrapper = styled.div`
