@@ -1001,7 +1001,7 @@ export const benifitArray = [
         id : 4,
         img : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/48/Badge.svg",
         title : "Specialized",
-        p1 : "Our senior developers have 14+ years of experience in WordPress and have delivered hundreds of outstanding projects.",
+        p1 : "Our senior developers have 14+ years of experience in Web , Mobile app development and have delivered hundreds of outstanding projects.",
         p2 : "We have worked on countless projects as a team and are always excited to innovate and develop something unavailable on the market."
     },
     {
@@ -1025,7 +1025,7 @@ export const solutionsArray = [
         id : 1,
         src : "https://itmonks.com/wp-content/themes/it-monks/public/img/icons/96/Online.svg",
         title : "Websites for Publishers",
-        desc : "As an experienced WordPress Agency, we implement and support large online magazines and blogs, including relaunch, SEO, and monetization. We work closely with your editorial team to properly understand their needs and expectation from the publishing platform we are building. Our customers in the field of online publishing have up to 100k concurrent visitors thanks to WordPress VIP hosting. If you are an experienced blogger or have just started, feel free to reach out to us for free consultation and recommendations on making your work easier and more profitable."
+        desc : "As an experienced Web and Mobile App Development Agency, we implement and support large online magazines and blogs, including relaunch, SEO, and monetization. We work closely with your editorial team to properly understand their needs and expectation from the publishing platform we are building. Our customers in the field of online publishing have up to 100k concurrent visitors thanks to WordPress VIP hosting. If you are an experienced blogger or have just started, feel free to reach out to us for free consultation and recommendations on making your work easier and more profitable."
     },
     {
         id : 2,

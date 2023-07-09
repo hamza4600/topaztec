@@ -10,8 +10,8 @@ const deign = [
 ];
 const develop = [
     { id: 1, name: "web development", link: "/" },
+    { id: 3, name: "Mobile Applications", link: "/" },
     { id: 2, name: "E-commerce development", link: "/" },
-    { id: 3, name: "no code develop", link: "/" },
 ];
 const social = [
     { id: 1, name: "instagram", link: "https://www.instagram.com/topaztec" },

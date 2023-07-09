@@ -90,7 +90,7 @@ const LeftSide = () => {
             <div className="des">
                 <p>
                     Having an incredible team with over 15 years of experience
-                    in the industry allows us to take on unique WordPress
+                    in the industry allows us to take on unique Web
                     projects with any complexity and create fascinating,
                     high-performing, and visually outstanding solutions.
                 </p>

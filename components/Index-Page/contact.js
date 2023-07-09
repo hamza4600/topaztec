@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
@@ -50,8 +51,7 @@ const TextCardWrapper = styled.div`
         }
     }
 `;
-const TextPart = ({ head, text }) => {
-    return (
+const TextPart = ({ head, text }) => (
         <TextCardWrapper>
             <div className="head">{head}</div>
             <div className="text">
@@ -59,7 +59,6 @@ const TextPart = ({ head, text }) => {
             </div>
         </TextCardWrapper>
     );
-};
 
 const FormWrapper = styled.div`
     display: flex;
@@ -105,6 +104,25 @@ const FormContainer = styled.form`
 
         &::placeholder {
             color: #666666;
+        }
+
+        // disabled
+        &:disabled {
+            background-color: #f5f5f5;
+            color: #666666;
+            border: 0.071rem solid #c1c5cf;
+            cursor: not-allowed;
+        }
+
+        // if number type dont show arrows
+        &[type="number"] {
+            -moz-appearance: textfield;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+
+            }
         }
     }
 
@@ -260,8 +278,7 @@ const Item = styled.li`
     }
 `;
 
-const SocialIcons = () => {
-    return (
+const SocialIcons = () => (
         <IconWrapper>
             <Item hoverColor="#0077b5">
                 <a href="https://www.linkedin.com/company/topaztec"
@@ -297,7 +314,7 @@ const SocialIcons = () => {
             </Item>
         </IconWrapper>
     );
-};
+
 const Card = styled.div`
     display: flex;
     flex-direction: row;
@@ -438,8 +455,7 @@ const Clutch = () => {
     );
 };
 
-const ContactInfo = () => {
-    return (
+const ContactInfo = () => (
         <InfoWrapper>
             <TextPart
                 head="Contact"
@@ -450,27 +466,77 @@ const ContactInfo = () => {
             <Clutch />
         </InfoWrapper>
     );
-};
+
 
 const Form = () => {
     
-    // submit form 
+    // submit form
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        website: "",
+        phone: "",
+        description: "",
+        where: "",
+        checkbox: false,
+    });
+
+    // show popup
+    const [show, setShow] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(form);
+        // setShow(true);
+        // only show pop up for 3s
+    };
+
     return (
         <>
             <FormContainer>
                 <div className="row">
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Name" 
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    />
+                    <input type="email" placeholder="Email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    />
                 </div>
                 <div className="row">
-                    <input type="text" placeholder="Website" />
-                    <input type="text" placeholder="Phone" />
+                    <input type="url" placeholder="Website"
+                    name="website"
+                    value={form.website}
+                    onChange={handleChange}
+                    />
+                    <input type="number" placeholder="Phone"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    />
                 </div>
                 <div className="row-aria">
-                    <textarea placeholder="Descriptionof project" />
+                    <textarea placeholder="Description of project"
+                    name="description"
+                    value={form.description}
+                    onChange={handleChange}
+                    />
                 </div>
                 <div className="row-aria-2">
-                    <textarea placeholder="Where did you find us?" />
+                    <textarea placeholder="Where did you find us?"
+                    name="where"
+                    value={form.where}
+                    onChange={handleChange}
+                    />
                 </div>
 
                 <div className="checkbox">
@@ -478,14 +544,19 @@ const Form = () => {
                         type="checkbox"
                         id="vehicle1"
                         name="vehicle1"
-                        value="Bike"
+                        value={form.checkbox}
+                        onChange={handleChange}
                     />
                     <label for="vehicle1">
                         I agree to the <a href="#">Privacy Policy</a>
                     </label>
                 </div>
                 <div className="btn-box">
-                    <button type="submit" disabled>
+                    <button type="submit"
+                        aria-label="submit"
+                        aria-describedby="submit"
+                        onClick={handleSubmit}
+                    >
                         Send
                     </button>
                     <div className="text">
@@ -496,6 +567,7 @@ const Form = () => {
                     </div>
                 </div>
             </FormContainer>
+            {/* <Popup show={show} setShow={setShow} /> */}
         </>
     );
 };

@@ -81,9 +81,9 @@ const  TextContainer = () => {
         <TextWrapper>
                 <div className="sub-title">Our story</div>
                 <div className="title">Who are we ?</div>
-                <p>We are Experts who love WordPress and its community. We moved WordPress to the next level by creating incredible solutions using just WordPress and our experience and creativity.</p>
-                <p>Being in the industry for 14 years, we can take on any WordPress-related project and deliver solutions to a very high standard.</p>
-                <p>Is WordPress right for you? We built fantastic tools with WordPress. Get a free consultation and decide what technologies are right for you!</p>
+                <p>We are a team of skilled professionals who excel at building advanced applications using React, the industry-leading JavaScript library for user interfaces. Our focus is on creating cutting-edge solutions that deliver exceptional user experiences.</p>
+                <p>Being in the industry for 14 years, we can take on any Web-related project and deliver solutions to a very high standard.</p>
+                <p>Are you searching for the perfect technology to drive your online presence? Look no further! Our team of experts has created remarkable tools and solutions that can propel your business forward!</p>
         </TextWrapper>
     )
 }

@@ -120,7 +120,7 @@ const HeadingImage = () => {
         <>
             <HeadWrapper>
                 <h5>WE CAN SOLVE YOUR PROBLEMS</h5>
-                <h2>A WordPress development agency.</h2>
+                <h2>A Web development agency.</h2>
                 <ImaeWrapper>
                     <img
                         src={

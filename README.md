@@ -8,3 +8,4 @@ https://itmonks.com
 # resolve issue then make apull request
 
 Conact From  Submit is remaing
+add Google analytics in domain 
